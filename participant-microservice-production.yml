@@ -1,4 +1,5 @@
-message: Greetings from the PARTICIPANT microservice [using the PRODUCTION config]
+config:
+  message: Greetings from the PARTICIPANT microservice [using the PRODUCTION config]
 
 spring:
   data:
