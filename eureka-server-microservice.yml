@@ -1,14 +1,8 @@
 config:
   message: Greetings from the EUREKA server microservice [using the BASE config]
 
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    
 server:
   port: 13303
 
 management:
   port: 13304
-  context-path: /eureka/manage
