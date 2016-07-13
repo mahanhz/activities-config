@@ -8,8 +8,7 @@ eureka:
     
 server:
   port: 13303
-  context-path: /eurekaServer
 
 management:
   port: 13304
-  context-path: /eurekaServer/manage
+  context-path: /eureka/manage
