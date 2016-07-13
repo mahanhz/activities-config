@@ -8,6 +8,10 @@ management:
   port: 13304
   context-path: /eureka/manage
 
+error:
+    whitelabel:
+      enabled: false
+      
 eureka:
   dashboard:
     path: eurekaWebUI
