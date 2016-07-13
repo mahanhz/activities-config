@@ -12,5 +12,5 @@ eureka:
   dashboard:
     path: eurekaWebUI
   instance:
-    statusPageUrlPath: ${management.contextPath}/info
-    healthCheckUrlPath: ${management.contextPath}/health
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrlPath: ${management.context-path}/health
