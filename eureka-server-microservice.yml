@@ -9,8 +9,8 @@ management:
   context-path: /eureka/manage
 
 error:
-    whitelabel:
-      enabled: false
+  whitelabel:
+    enabled: false
       
 eureka:
   dashboard:
