@@ -6,3 +6,8 @@ server:
 
 management:
   port: 13304
+  context-path: /eureka/manage
+
+eureka:
+  dashboard:
+    path: eurekaWebUI
