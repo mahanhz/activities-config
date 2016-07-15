@@ -3,7 +3,7 @@ config:
 
 eureka:
   instance:
-    hostname: 192.168.1.33
+    hostname: ${peer1.hostname}
   client:
     serviceUrl:
       defaultZone: http://${peer2.hostname}:${server.port}${server.context-path}/
