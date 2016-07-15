@@ -15,7 +15,7 @@ error:
 
 eureka:
   dashboard:
-    path: eurekaWebUI
+    path: dashboard
   instance:
     preferIpAddress: true
     statusPageUrlPath: ${management.context-path}/info
