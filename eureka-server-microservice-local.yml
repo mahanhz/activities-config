@@ -2,5 +2,6 @@ config:
   message: Greetings from the EUREKA server microservice [using the LOCAL config]
 
 eureka:
+  environment: local
   instance:
     hostname: localhost
