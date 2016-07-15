@@ -1,0 +1,5 @@
+peer1:
+  hostname: 192.168.1.33
+
+peer2:
+  hostname: 192.168.1.34
