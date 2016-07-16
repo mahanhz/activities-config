@@ -6,4 +6,4 @@ eureka:
     hostname: ${peer1.hostname}
   client:
     serviceUrl:
-      defaultZone: http://${peer2.hostname}:${server.port}/${eureka.defaultZone.context-path}/
+      defaultZone: http://${peer2.hostname}:${server.port}${server.context-path}/${eureka.defaultZone.context-path}/

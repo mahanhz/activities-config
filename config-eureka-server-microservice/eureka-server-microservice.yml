@@ -3,7 +3,7 @@ config:
 
 server:
   port: 13303
-  context-path: /eureka
+  context-path: /eurekaServer
 
 management:
   port: 13304
@@ -16,7 +16,7 @@ error:
 eureka:
   # defaultZone.context-path is a made up eureka property for reuse
   defaultZone:
-    context-path: eurekaZone
+    context-path: eureka
   dashboard:
     path: dashboard
   instance:
@@ -27,4 +27,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/${eureka.defaultZone.context-path}/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}${server.context-path}/${eureka.defaultZone.context-path}/
