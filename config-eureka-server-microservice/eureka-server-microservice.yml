@@ -30,3 +30,5 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}${server.context-path}/${eureka.defaultZone.context-path}/
+  server:
+    enable-self-preservation: false
