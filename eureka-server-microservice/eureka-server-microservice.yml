@@ -21,6 +21,7 @@ eureka:
     path: dashboard
   instance:
     preferIpAddress: true
+    homePageUrl: https://${eureka.instance.hostname}:${server.port}${server.context-path}/
     statusPageUrl: http://${eureka.instance.hostname}:${management.port}${management.context-path}/info
     statusPageUrlPath: ${management.context-path}/info
     healthCheckUrl: http://${eureka.instance.hostname}:${management.port}${management.context-path}/health
