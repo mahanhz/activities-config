@@ -1,0 +1,32 @@
+config:
+  message: Greetings from the PARTICIPANT microservice [using the BASE config]
+
+server:
+  port: 13305
+  context-path: /participant
+
+management:
+  port: 13306
+  context-path: ${server.context-path}/manage
+
+error:
+  whitelabel:
+    enabled: false
+
+spring:
+  data:
+    mongodb:
+      database: activitiesDB
+      port: 27017
+      events: participantEvents
+      snapshots: participantSnapshots
+      
+eureka:
+  instance:
+    preferIpAddress: true
+    homePageUrl: https://${eureka.instance.hostname}:${server.port}${server.context-path}/
+    statusPageUrl: http://${eureka.instance.hostname}:${management.port}${management.context-path}/info
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrl: http://${eureka.instance.hostname}:${management.port}${management.context-path}/health
+    healthCheckUrlPath: ${management.context-path}/health
+
