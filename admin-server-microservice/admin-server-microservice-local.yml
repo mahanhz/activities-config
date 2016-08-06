@@ -1,9 +1,5 @@
 config:
   message: Greetings from the ADMIN SERVER microservice [using the LOCAL config]
       
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:13303/eurekaServer/eureka/
+instance:
+  hostname: localhost

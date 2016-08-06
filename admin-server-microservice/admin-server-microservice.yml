@@ -1,23 +1,24 @@
 config:
   message: Greetings from the ADMIN SERVER microservice [using the BASE config]
 
+spring:
+  boot:
+    admin:
+      url: http://${instance.hostname}:${server.port}${server.context-path}
+      client:
+        health-url: http://${instance.hostname}:${management.port}${management.context-path}/health
+        management-url: http://${instance.hostname}:${management.port}${management.context-path}
+        service-url: http://${instance.hostname}:${server.port}${server.context-path}
+
 server:
   port: 13307
+  context-path: /adminServer
 
 management:
   port: 13308
-  context-path: /manage
+  context-path: /adminServer/manage
 
 error:
   whitelabel:
     enabled: false
-      
-eureka:
-  instance:
-    preferIpAddress: true
-    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
-    statusPageUrl: http://${eureka.instance.hostname}:${management.port}${management.context-path}/info
-    statusPageUrlPath: ${management.context-path}/info
-    healthCheckUrl: http://${eureka.instance.hostname}:${management.port}${management.context-path}/health
-    healthCheckUrlPath: ${management.context-path}/health
 
