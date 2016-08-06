@@ -4,7 +4,6 @@ config:
 spring:
   boot:
     admin:
-      url: http://${instance.hostname}:${server.port}${server.context-path}
       client:
         health-url: http://${instance.hostname}:${management.port}${management.context-path}/health
         management-url: http://${instance.hostname}:${management.port}${management.context-path}

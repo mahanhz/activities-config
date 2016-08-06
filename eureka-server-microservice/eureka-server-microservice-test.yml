@@ -6,3 +6,8 @@ peer1:
 
 peer2:
   hostname: 192.168.1.34
+
+spring:
+  boot:
+    admin:
+      url: http://192.168.1.33:13307/adminServer,http://192.168.1.34:13307/adminServer

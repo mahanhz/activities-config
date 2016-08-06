@@ -1,6 +1,11 @@
 config:
   message: Greetings from the EUREKA server microservice [using the LOCAL config]
 
+spring:
+  boot:
+    admin:
+      url: http://localhost:13307/adminServer
+      
 eureka:
   environment: local
   instance:

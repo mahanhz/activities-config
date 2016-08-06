@@ -1,6 +1,14 @@
 config:
   message: Greetings from the EUREKA server microservice [using the BASE config]
 
+spring:
+  boot:
+    admin:
+      client:
+        health-url: http://${instance.hostname}:${management.port}${management.context-path}/health
+        management-url: http://${instance.hostname}:${management.port}${management.context-path}
+        service-url: http://${instance.hostname}:${server.port}${server.context-path}
+        
 server:
   port: 13303
   context-path: /eurekaServer
