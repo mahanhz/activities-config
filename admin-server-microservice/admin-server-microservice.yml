@@ -1,0 +1,23 @@
+config:
+  message: Greetings from the ADMIN SERVER microservice [using the BASE config]
+
+server:
+  port: 13307
+
+management:
+  port: 13308
+  context-path: /manage
+
+error:
+  whitelabel:
+    enabled: false
+      
+eureka:
+  instance:
+    preferIpAddress: true
+    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
+    statusPageUrl: http://${eureka.instance.hostname}:${management.port}${management.context-path}/info
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrl: http://${eureka.instance.hostname}:${management.port}${management.context-path}/health
+    healthCheckUrlPath: ${management.context-path}/health
+
