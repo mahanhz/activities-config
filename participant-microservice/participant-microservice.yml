@@ -8,7 +8,13 @@ spring:
         health-url: http://${eureka.instance.hostname}:${management.port}${management.context-path}/health
         management-url: http://${eureka.instance.hostname}:${management.port}${management.context-path}
         service-url: http://${eureka.instance.hostname}:${server.port}${server.context-path}
-
+  data:
+    mongodb:
+      database: activitiesDB
+      port: 27017
+      events: participantEvents
+      snapshots: participantSnapshots
+      
 server:
   port: 13305
   context-path: /participant
@@ -20,15 +26,7 @@ management:
 error:
   whitelabel:
     enabled: false
-
-spring:
-  data:
-    mongodb:
-      database: activitiesDB
-      port: 27017
-      events: participantEvents
-      snapshots: participantSnapshots
-      
+  
 eureka:
   instance:
     preferIpAddress: true
