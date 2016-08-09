@@ -1,8 +1,3 @@
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://192.168.1.33:13303/eurekaServer/eureka/,http://192.168.1.34:13303/eurekaServer/eureka/
-
 spring:
   data:
     mongodb:

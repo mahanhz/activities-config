@@ -5,10 +5,3 @@ spring:
   data:
     mongodb:
       host: 192.168.1.32
-      
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:13303/eurekaServer/eureka/
