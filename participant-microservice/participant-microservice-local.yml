@@ -2,6 +2,9 @@ config:
   message: Greetings from the PARTICIPANT microservice [using the LOCAL config]
 
 spring:
+  boot:
+    admin:
+      url: http://localhost:13307/adminServer
   data:
     mongodb:
       host: 192.168.1.32
