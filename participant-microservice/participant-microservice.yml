@@ -2,8 +2,6 @@ config:
   message: Greetings from the PARTICIPANT microservice [using the BASE config]
 
 spring:
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   boot:
     admin:
       client:
