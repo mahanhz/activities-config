@@ -2,6 +2,10 @@ config:
   message: Greetings from the PARTICIPANT microservice [using the BASE config]
 
 spring:
+  autoconfigure: # exclude in mem db
+    exclude[0]: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+    exclude[1]: org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+    exclude[2]: org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
   boot:
     admin:
       client:
