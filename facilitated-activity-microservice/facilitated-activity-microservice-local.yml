@@ -1,0 +1,12 @@
+config:
+  message: Greetings from the FACILITATED ACTIVITY microservice [using the LOCAL config]
+
+spring:
+  boot:
+    admin:
+      url: http://localhost:13307/adminServer
+  data:
+    cassandra:
+      contact-points: 192.168.1.32
+    mongodb:
+      host: 192.168.1.32
