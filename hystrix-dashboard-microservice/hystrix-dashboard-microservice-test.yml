@@ -1,0 +1,10 @@
+config:
+  message: Greetings from the FACILITATED ACTIVITY microservice [using the TEST config]
+
+instance:
+  hostname: 192.168.1.35
+    
+spring:
+  boot:
+    admin:
+      url: http://192.168.1.33:13307/adminServer,http://192.168.1.34:13307/adminServer

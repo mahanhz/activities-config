@@ -1,0 +1,10 @@
+config:
+  message: Greetings from the HYSTRIX DASHBOARD microservice [using the LOCAL config]
+
+instance:
+  hostname: localhost
+  
+spring:
+  boot:
+    admin:
+      url: http://localhost:13307/adminServer
