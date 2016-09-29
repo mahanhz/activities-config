@@ -35,7 +35,19 @@ management:
 error:
   whitelabel:
     enabled: false
-  
+
+external:
+  participant:
+    url: http://participant-microservice/participant
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+              
 eureka:
   instance:
     preferIpAddress: true
