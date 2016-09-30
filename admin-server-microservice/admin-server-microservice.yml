@@ -14,10 +14,11 @@ spring:
 
 server:
   port: 13307
+  context-path: /adminServer
 
 management:
   port: 13308
-  context-path: ${spring.boot.admin.context-path}/manage
+  context-path: ${server.context-path}/manage
 
 error:
   whitelabel:
