@@ -9,8 +9,6 @@ spring:
         health-url: http://${instance.hostname}:${management.port}${management.context-path}/health
         management-url: http://${instance.hostname}:${management.port}${management.context-path}
         service-url: http://${instance.hostname}:${server.port}${server.context-path}
-      routes:
-        endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,hystrix.stream,turbine.stream,activiti
 
 server:
   port: 13307
