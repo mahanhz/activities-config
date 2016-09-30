@@ -1,6 +1,10 @@
 config:
   message: Greetings from the PARTICIPANT microservice [using the LOCAL config]
 
+eureka:
+  instance:
+    hostname: localhost
+    
 spring:
   boot:
     admin:

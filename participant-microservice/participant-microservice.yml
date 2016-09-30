@@ -8,6 +8,7 @@ spring:
     exclude[2]: org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
   boot:
     admin:
+      auto-deregistration: true
       client:
         health-url: http://${eureka.instance.hostname}:${management.port}${management.context-path}/health
         management-url: http://${eureka.instance.hostname}:${management.port}${management.context-path}
