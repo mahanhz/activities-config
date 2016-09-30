@@ -1,6 +1,9 @@
 config:
   message: Greetings from the FACILITATED ACTIVITY microservice [using the LOCAL config]
 
+instance:
+  hostname: localhost
+  
 spring:
   boot:
     admin:
