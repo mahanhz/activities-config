@@ -4,6 +4,7 @@ config:
 spring:
   boot:
     admin:
+      context-path: /adminServer
       client:
         health-url: http://${instance.hostname}:${management.port}${management.context-path}/health
         management-url: http://${instance.hostname}:${management.port}${management.context-path}
@@ -11,11 +12,10 @@ spring:
 
 server:
   port: 13307
-  context-path: /adminServer
 
 management:
   port: 13308
-  context-path: /adminServer/manage
+  context-path: ${spring.boot.admin.context-path}/manage
 
 error:
   whitelabel:
