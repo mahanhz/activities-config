@@ -1,0 +1,32 @@
+config:
+  message: Greetings from the TURBINE microservice [using the BASE config]
+
+spring:
+  boot:
+    admin:
+      client:
+        health-url: http://${instance.hostname}:${management.port}${management.context-path}/health
+        management-url: http://${instance.hostname}:${management.port}${management.context-path}
+        service-url: http://${instance.hostname}:${server.port}${server.context-path}
+      
+server:
+  port: 13313
+  context-path: /turbine
+
+management:
+  port: 13314
+  context-path: ${server.context-path}/manage
+
+error:
+  whitelabel:
+    enabled: false
+              
+eureka:
+  instance:
+    preferIpAddress: true
+    homePageUrl: https://${instance.hostname}:${server.port}${server.context-path}/
+    statusPageUrl: http://${instance.hostname}:${management.port}${management.context-path}/info
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrl: http://${instance.hostname}:${management.port}${management.context-path}/health
+    healthCheckUrlPath: ${management.context-path}/health
+
