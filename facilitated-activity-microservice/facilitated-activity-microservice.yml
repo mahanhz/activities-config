@@ -57,4 +57,7 @@ eureka:
     statusPageUrlPath: ${management.context-path}/info
     healthCheckUrl: http://${instance.hostname}:${management.port}${management.context-path}/health
     healthCheckUrlPath: ${management.context-path}/health
+    metadata-map:
+      management:
+        port: ${management.port} # This is needed by Netflix turbine
 
