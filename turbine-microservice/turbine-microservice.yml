@@ -29,4 +29,11 @@ eureka:
     statusPageUrlPath: ${management.context-path}/info
     healthCheckUrl: http://${instance.hostname}:${management.port}${management.context-path}/health
     healthCheckUrlPath: ${management.context-path}/health
+    
+turbine:
+  aggregator:
+    clusterConfig: FACILITATED-ACTIVITY-MICROSERVICE
+  instanceUrlSuffix: # This is needed when custom context-path is used
+    FACILITATED-ACTIVITY-MICROSERVICE: /activity/facilitated/manage/hystrix.stream
+  appConfig: facilitated-activity-microservice
 
