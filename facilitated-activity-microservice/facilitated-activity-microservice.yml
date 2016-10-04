@@ -43,11 +43,8 @@ external:
 
 hystrix:
   command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 10000
+    participantsByCriteria:
+      execution.isolation.thread.timeoutInMilliseconds: 10000
               
 eureka:
   instance:
