@@ -1,0 +1,5 @@
+config:
+  message: Greetings from the ACTIVITIES UI microservice [using the PRODUCTION2 config]
+
+instance:
+  hostname: 192.168.1.34
