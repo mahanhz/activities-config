@@ -32,8 +32,8 @@ eureka:
     
 turbine:
   aggregator:
-    clusterConfig: FACILITATED-ACTIVITY-MICROSERVICE
+    clusterConfig: ACTIVITIES-UI
   instanceUrlSuffix: # This is needed when custom context-path is used
-    FACILITATED-ACTIVITY-MICROSERVICE: /activity/facilitated/manage/hystrix.stream
-  appConfig: facilitated-activity-microservice
+    ACTIVITIES-UI: /activities/ui/manage/hystrix.stream
+  appConfig: activities-ui
 
