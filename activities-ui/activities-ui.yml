@@ -16,7 +16,14 @@ spring:
 server:
   port: 13309
   context-path: /activities/ui
+  session:
+    timeout: 600 # 10 minutes
 
+vaadin:
+  servlet:
+    close-idle-sessions: true # Don't want Vaadin's heart beat signal to keep the session alive
+    heartbeat-interval: 300 # The session timeout should be a multiple of the heartbeat interval
+    
 management:
   port: 13310
   context-path: ${server.context-path}/manage
@@ -45,13 +52,4 @@ eureka:
     metadata-map:
       management:
         port: ${management.port} # This is needed by Netflix turbine
-        
-server:
-  session:
-    timeout: 600 # 10 minutes
-
-vaadin:
-  servlet:
-    close-idle-sessions: true # Don't want Vaadin's heart beat signal to keep the session alive
-    heartbeat-interval: 300 # The session timeout should be a multiple of the heartbeat interval
 
