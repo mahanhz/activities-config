@@ -21,15 +21,21 @@ server:
   error:
     whitelabel:
       enabled: false
-    
+
+management:
+  port: 13310
+  context-path: ${server.context-path}/manage
+      
 vaadin:
   servlet:
     close-idle-sessions: true # Don't want Vaadin's heart beat signal to keep the session alive
     heartbeat-interval: 300 # The session timeout should be a multiple of the heartbeat interval
-    
-management:
-  port: 13310
-  context-path: ${server.context-path}/manage
+
+togglz:
+  console:
+    enabled: true
+    path: /togglz-console
+    feature-admin-authority: ROLE_ADMIN
 
 external:
   participant:
