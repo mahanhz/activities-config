@@ -14,12 +14,14 @@ spring:
 server:
   port: 13307
   context-path: /adminServer
-
+  error:
+    whitelabel:
+      enabled: false
+      
 management:
   port: 13308
   context-path: ${server.context-path}/manage
 
-error:
-  whitelabel:
-    enabled: false
+zuul:
+  sensitive-headers: # Deliberately blank so clients with basic authentication can authenticate
 
