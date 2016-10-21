@@ -1,5 +1,0 @@
-config:
-  message: Greetings from the FACILITATED ACTIVITY microservice [using the PRODUCTION1 config]
-
-instance:
-  hostname: 192.168.1.33
