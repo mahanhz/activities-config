@@ -1,5 +1,5 @@
 config:
-  message: Greetings from the HYSTRIX DASHBOARD microservice [using the PRODUCTION config]
+  message: Greetings from the MICROSERVICES DASHBOARD [using the PRODUCTION config]
 
 instance:
   hostname: 192.168.1.35

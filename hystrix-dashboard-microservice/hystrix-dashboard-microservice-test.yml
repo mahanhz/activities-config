@@ -1,5 +1,5 @@
 config:
-  message: Greetings from the FACILITATED ACTIVITY microservice [using the TEST config]
+  message: Greetings from the HYSTRIX DASHBOARD microservice [using the TEST config]
 
 instance:
   hostname: 192.168.1.35

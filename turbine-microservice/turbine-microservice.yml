@@ -12,14 +12,13 @@ spring:
 server:
   port: 13313
   context-path: /turbine
+  error:
+    whitelabel:
+      enabled: false
 
 management:
   port: 13314
   context-path: ${server.context-path}/manage
-
-error:
-  whitelabel:
-    enabled: false
               
 eureka:
   instance:

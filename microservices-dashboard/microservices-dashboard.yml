@@ -1,5 +1,5 @@
 config:
-  message: Greetings from the HYSTRIX DASHBOARD microservice [using the BASE config]
+  message: Greetings from the MICROSERVICES DASHBOARD [using the BASE config]
 
 spring:
   boot:
@@ -10,14 +10,14 @@ spring:
         service-url: http://${instance.hostname}:${server.port}${server.context-path}
       
 server:
-  port: 13311
-  context-path: /hystrix-dashboard
+  port: 13315
+  context-path: /microservices-dashboard
   error:
     whitelabel:
       enabled: false
     
 management:
-  port: 13312
+  port: 13316
   context-path: ${server.context-path}/manage
               
 eureka:
