@@ -8,7 +8,7 @@ spring:
     exclude[2]: org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
   boot:
     admin:
-      auto-deregistration: true
+      #auto-deregistration: true
       client:
         health-url: http://${eureka.instance.hostname}:${management.port}${management.context-path}/health
         management-url: http://${eureka.instance.hostname}:${management.port}${management.context-path}
@@ -28,14 +28,13 @@ spring:
 server:
   port: 13305
   context-path: /participant
-
+  error:
+    whitelabel:
+      enabled: false
+    
 management:
   port: 13306
   context-path: ${server.context-path}/manage
-
-error:
-  whitelabel:
-    enabled: false
   
 eureka:
   instance:

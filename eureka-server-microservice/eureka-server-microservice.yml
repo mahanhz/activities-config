@@ -4,7 +4,7 @@ config:
 spring:
   boot:
     admin:
-      auto-deregistration: true
+      #auto-deregistration: true
       client:
         health-url: http://${eureka.instance.hostname}:${management.port}${management.context-path}/health
         management-url: http://${eureka.instance.hostname}:${management.port}${management.context-path}
@@ -13,14 +13,13 @@ spring:
 server:
   port: 13303
   context-path: /eurekaServer
-
+  error:
+    whitelabel:
+      enabled: false
+    
 management:
   port: 13304
   context-path: ${server.context-path}/manage
-
-error:
-  whitelabel:
-    enabled: false
 
 eureka:
   # defaultZone.context-path is a made up eureka property for reuse

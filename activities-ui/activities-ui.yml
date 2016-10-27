@@ -4,7 +4,7 @@ config:
 spring:
   boot:
     admin:
-      auto-deregistration: true
+      #auto-deregistration: true
       client:
         health-url: http://${instance.hostname}:${management.port}${management.context-path}/health
         management-url: http://${instance.hostname}:${management.port}${management.context-path}
